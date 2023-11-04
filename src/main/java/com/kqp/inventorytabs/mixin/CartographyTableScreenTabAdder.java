@@ -19,11 +19,10 @@ import net.minecraft.client.util.math.MatrixStack;
 @Mixin(CartographyTableScreen.class)
 public class CartographyTableScreenTabAdder {
     @Inject(method = "drawBackground", at = @At(value = "INVOKE", shift = At.Shift.AFTER, target = "Lnet/minecraft/client/gui/screen/ingame/CartographyTableScreen;renderBackground(Lnet/minecraft/client/gui/DrawContext;)V"))
-    /** protected void drawBackgroundTabs(DrawContext context, float delta, int mouseX, int mouseY, CallbackInfo ci) {
-    *    MinecraftClient client = MinecraftClient.getInstance();
-    *    TabManager tabManager = ((TabManagerContainer) client).getTabManager();
-    *
-    *    tabManager.tabRenderer.renderBackground(context);
-    * }
-    */
+    protected void drawBackgroundTabs(DrawContext context, float delta, int mouseX, int mouseY, CallbackInfo ci) {
+        MinecraftClient client = MinecraftClient.getInstance();
+        TabManager tabManager = ((TabManagerContainer) client).getTabManager();
+
+        tabManager.tabRenderer.renderBackground(context);
+    }
 }
