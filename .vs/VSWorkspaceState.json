@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\kqp",
+    "\\src\\main\\java\\com\\kqp\\inventorytabs",
+    "\\src\\main\\java\\com\\kqp\\inventorytabs\\mixin",
+    "\\src\\main\\java\\com\\kqp\\inventorytabs\\tabs",
+    "\\src\\main\\java\\com\\kqp\\inventorytabs\\tabs\\tab",
+    "\\src\\main\\resources"
+  ],
+  "SelectedNode": "\\src\\main\\resources\\fabric.mod.json",
+  "PreviewInSolutionExplorer": false
+}
