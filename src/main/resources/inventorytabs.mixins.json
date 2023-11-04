@@ -4,7 +4,7 @@
   "package": "com.kqp.inventorytabs.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    //"CartographyTableScreenTabAdder",
+    "CartographyTableScreenTabAdder",
     "LoomScreenTabAdder",
     "ShulkerBoxBlockInvoker",
     "StonecutterScreenTabAdder",
