@@ -24,12 +24,18 @@ jobs:
       - name: validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
       - name: setup jdk ${{ matrix.java }}
+        if: ${{ runner.os != 'Windows' }}
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt-hotspot'
           java-version: ${{ matrix.java }}
-          if: ${{ runner.os != 'Windows' }}
           cache: 'gradle'
+      - name: setup jdk ${{ matrix.java }}
+        if: ${{ runner.os != 'Linux' }}
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'adopt-hotspot'
+          java-version: ${{ matrix.java }}
       - name: make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
